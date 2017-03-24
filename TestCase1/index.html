@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	
+	<title>Collaboration</title>
+
+	<link rel="stylesheet" type="text/css" href="blog.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src = "script.js"></script>
+
+	<style type="text/css">
+		body {
+			padding: 20px;
+			margin: 0px;
+			font-size: 14px;
+			font-family: "Arial", Georgia, Serif;
+		}
+	</style>
+
+
+	<script> 
+	function () {
+		var commentSection = document.getElementById("comment-section");
+		commentSection.comments({
+			profilePictureUrl : 'commentAvatar.png',
+			currentUserId : 1,
+
+			getUsers = function(success, error){
+				setTimeout(function(){
+					success(usersArray);
+				}, 500);
+			},
+			getComments = function(success, error){
+				setTimeout(function(){
+					success(commentsArray);
+				}, 500);
+			},
+
+			postComment = function(data, success, error) {
+				setTimeout(function(){
+					success(saveComment(data));
+				},500);
+			},
+			deleteComment = function(data,success,error) {
+				setTimeout(function(){
+					success();
+				},500);
+			}, 
+			upvoteComment = function(data, success, error){
+				setTimeout(function(){
+					success(data);
+				}, 500);
+			},
+		});
+	};
+	</script>
+
+</head>
+<body>
+<div id="comment-section"></div>
+</body>
+</html>
