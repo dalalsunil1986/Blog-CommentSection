@@ -168,7 +168,7 @@ input[type] {
     position: relative;
     margin-right: 4px;
     word-wrap: break-word;
-    font-family: Roboto, Geneva, sans-serif
+    font-family: Roboto, Geneva, sans-serif;
     color: #404040;
     font-size: 14px;
 }
@@ -343,7 +343,7 @@ margin-left: -8px;
 .share-link{
     font-size: 18px;
     opacity: 0.5;
-    margin-left: 6px;im
+    margin-left: 6px;
     margin-right: -7px;
 }
 .default-max-width{
@@ -388,9 +388,9 @@ margin-left: -8px;
     line-height: 20px;
     text-align : left;
 }
-.edit{
-    display: none !important; 
-}
+/*.edit{*/
+    /*display: none !important; */
+/*}*/
 
 .duration{
     float: right;
