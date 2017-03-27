@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="391d7fc3-2c23-496a-a017-c7792ca4faba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/commentsData.js" afterPath="$PROJECT_DIR$/scripts/commentsData.js" />
     </list>
     <ignored path="pure-layout-blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="206" column="47" selection-start-line="206" selection-start-column="47" selection-end-line="206" selection-end-column="47" />
+            <state relative-caret-position="604">
+              <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,10 +94,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-54" />
-    <option name="y" value="17" />
+    <option name="x" value="-43" />
     <option name="width" value="1300" />
-    <option name="height" value="930" />
+    <option name="height" value="984" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -201,6 +200,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\moab\Pictures\Anki Comment Task\pure-layout-blog\img" />
       <recent name="C:\Users\moab\Pictures\Anki Comment Task\pure-layout-blog\css" />
       <recent name="C:\Users\moab\Pictures\Anki Comment Task\pure-layout-blog" />
     </key>
@@ -271,7 +271,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490610504233</updated>
       <workItem from="1490610505455" duration="2551000" />
-      <workItem from="1490613088173" duration="6009000" />
+      <workItem from="1490613088173" duration="6805000" />
     </task>
     <task id="LOCAL-00001" summary="Jquery Update Comments">
       <created>1490617482011</created>
@@ -280,14 +280,21 @@
       <option name="project" value="LOCAL" />
       <updated>1490617482011</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Screenshot">
+      <created>1490619470012</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619470012</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8560000" />
+    <option name="totallyTimeSpent" value="9356000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-54" y="17" width="1300" height="930" extended-state="1" />
+    <frame x="-43" y="0" width="1300" height="984" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1487539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -333,7 +340,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Jquery Update Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jquery Update Comments" />
+    <MESSAGE value="Screenshot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Screenshot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -452,8 +460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="206" column="47" selection-start-line="206" selection-start-column="47" selection-end-line="206" selection-end-column="47" />
+        <state relative-caret-position="604">
+          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
           <folding />
         </state>
       </provider>
