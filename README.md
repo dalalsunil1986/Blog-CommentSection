@@ -1,16 +1,14 @@
-Pure CSS Layout Examples
+RequireJs
 ========================
 
-Layout examples using [Pure CSS][pure] compiled from the [pure-site][] project.
+RequireJS is a JavaScript file and module loader. It is optimized for in-browser use, but it can be used in other JavaScript environments, like Rhino and Node. Using a modular script loader like RequireJS will improve the speed and quality of your code.
 
-[pure]: http://purecss.io/
-[pure-site]: https://github.com/yahoo/pure-site
+[requireJs]: http://requirejs.org/
+[pure-site]: https://github.com/requirejs/requirejs
 
 
 License
 -------
-
-This software is free to use under the zLib license.
-See the [zLib][] license for more information.
-
-[zLib]: http://www.zlib.net/zlib_license.html
+Latest Release: 2.3.3
+Open source: new BSD or MIT licensed
+web design by Andy Chung © 2011-2017
