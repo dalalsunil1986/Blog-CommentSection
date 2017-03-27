@@ -196,6 +196,7 @@ var usersArray = [
     },
     {
         id: 7,
+        fullname: "Maha Anand",
         email: "anand@gmail.com",
         profile_picture_url: "img/common/commentAvatar.png"
     }
