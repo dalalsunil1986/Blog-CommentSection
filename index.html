@@ -35,10 +35,17 @@
 
     <!--Comment Stylesheet-->
     <link rel="stylesheet" href="css/jquery-comments.css">
+   
     <!--RequireJS-->
     <script data-main="config" src="Scripts/require.js"></script>
 
-
+	<!--Initializing MainScript-->
+    <script>
+        require(['config'], function () {
+            require(['main'])
+        })
+    </script>
+    
     <style type="text/css">
         body {
             padding: 20px;
@@ -48,12 +55,7 @@
         }
     </style>
 
-    <!--Initializing MainScript-->
-    <script>
-        require(['config'], function () {
-            require(['main'])
-        })
-    </script>
+    
 
 </head>
 <body>
@@ -208,6 +210,10 @@
             </header>
 
             <div id="comments-container"></div>
+
+            <!--End Comment Section-->
+
+
 
             <div class="footer">
                 <div class="pure-menu pure-menu-horizontal">
