@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sampleBlog</groupId>
-	<artifactId>Comment1</artifactId>
+	<artifactId>CommentRESTService</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Comment1 Maven Webapp</name>
@@ -103,6 +103,6 @@
 
 	</dependencies>
 	<build>
-		<finalName>Comment1</finalName>
+		<finalName>CommentRESTService</finalName>
 	</build>
 </project>
