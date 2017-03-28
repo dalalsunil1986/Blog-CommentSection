@@ -6,8 +6,9 @@ RequireJS is a JavaScript file and module loader. It is optimized for in-browser
 * [RequireJs]( http://requirejs.org/)
 * [Github]( https://github.com/requirejs/requirejs)
 
+SnapShot:
 
-![Alt text](https://github.com/ikismail/Blog-CommentSection/blob/master/img/commentSection.jpg)
+![Alt text](https://github.com/ikismail/Blog-CommentSection/blob/master/FrontEnd/img/commentSection.jpg)
 
 
 
