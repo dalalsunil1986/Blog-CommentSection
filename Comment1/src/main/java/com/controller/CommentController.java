@@ -43,7 +43,7 @@ public class CommentController {
 	}
 
 	@RequestMapping(value = "/comment/getComment/{commentId}", method = RequestMethod.GET)
-	public ResponseEntity<Comment> getUserById(@PathVariable("commentId") Integer commentId,
+	public ResponseEntity<Comment> getCommentById(@PathVariable("commentId") Integer commentId,
 			UriComponentsBuilder build) {
 		Comment comment = commentDao.getCommentById(commentId);
 		String path = build.path("/comments/").build().toString();
