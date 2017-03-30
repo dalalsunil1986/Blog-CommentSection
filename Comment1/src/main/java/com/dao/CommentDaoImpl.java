@@ -16,15 +16,26 @@ import com.model.Comment;
 public class CommentDaoImpl implements CommentDao {
 
 	static Logger log = Logger.getLogger(CommentDaoImpl.class.getName());
-	
+
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	// Getting all comments from Comment table
 	@Transactional
 	public List<Comment> getAllComments() {
 		Session session = sessionFactory.openSession();
+		// SELECT * from comment
 		List<Comment> comments = session.createQuery("from Comment").list();
 		log.info("Ending Comment method in DaoImpl");
 		return comments;
 	}
+
+	@Transactional
+	public Comment getCommentById(Integer commentId) {
+		Session session = sessionFactory.openSession();
+		Comment comment = (Comment) session.get(Comment.class, commentId);
+		session.close();
+		return comment;
+	}
+
 }

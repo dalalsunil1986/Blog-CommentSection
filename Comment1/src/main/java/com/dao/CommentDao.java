@@ -7,4 +7,6 @@ import com.model.Comment;
 public interface CommentDao {
 
 	List<Comment> getAllComments();
+
+	Comment getCommentById(Integer id);
 }

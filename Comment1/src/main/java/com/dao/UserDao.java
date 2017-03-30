@@ -7,4 +7,6 @@ import com.model.User;
 public interface UserDao {
 
 	List<User> getAllUsers();
+	
+	User getUserById(Integer userId);
 }
