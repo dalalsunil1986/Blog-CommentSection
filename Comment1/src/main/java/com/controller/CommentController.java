@@ -48,7 +48,7 @@ public class CommentController {
 		Comment comment = commentDao.getCommentById(commentId);
 		String path = build.path("/comments/").build().toString();
 		comment.setLinks(comment.addCommentLink(path.concat(comment.getId().toString()), "Self"));
-		
+
 		return new ResponseEntity<Comment>(comment, HttpStatus.OK);
 	}
 }
