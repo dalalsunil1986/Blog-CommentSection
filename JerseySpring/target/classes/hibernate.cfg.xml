@@ -8,9 +8,11 @@
 		<property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/commentDb</property>
 		<property name="hibernate.connection.username">SA</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">false</property>
 
-<!-- 		<mapping class="com.model.Test" /> -->
-<!-- 		<mapping class="com.model.Elements" /> -->
-		<mapping class="com.model1.Comment" />
+		<mapping class="com.model.comment.Comment" />
+		<mapping class="com.model.user.User" />
 	</session-factory>
 </hibernate-configuration>

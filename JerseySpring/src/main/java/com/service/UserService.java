@@ -7,29 +7,29 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.model.comment.Comment;
+import com.model.user.User;
 
-public class CommentService {
+public class UserService {
 
-	static Logger log = Logger.getLogger(CommentService.class.getName());
+	static Logger log = Logger.getLogger(UserService.class.getName());
 
 	Configuration config = new Configuration().configure("hibernate.cfg.xml");
 	SessionFactory sessionfactory = config.buildSessionFactory();
 
-	public List<Comment> getAllComments() {
+	public List<User> getAllUsers() {
 		Session session = sessionfactory.openSession();
-		log.info("Starting getAllComments");
-		List<Comment> list = session.createQuery("from Comment").list();
+		log.info("Starting getAllUsers");
+		List<User> list = session.createQuery("from User").list();
 		return list;
 	}
 
-	public Comment getCommentById(Integer commentId) {
-		log.info("Starting get Comment By Id" + commentId);
+	public User getUserById(Integer userId) {
+		log.info("Starting get User By Id" + userId);
 
 		Session session = sessionfactory.openSession();
-		Comment comment = session.get(Comment.class, commentId);
+		User user = session.get(User.class, userId);
 		session.close();
-		return comment;
+		return user;
 
 	}
 }
