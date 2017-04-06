@@ -11,15 +11,19 @@ RequireJS is a JavaScript file and module loader. It is optimized for in-browser
 ```
 {
   "id": 5,
-  "fullname": "administrator@gmail.com",
-  "email": "Administrator",
-  "profile_picture_url": "img/common/commentAvatar.png",
-  "links": [
-    {
-      "rel": "Self",
-      "href": "http://localhost:8091/CommentRESTService/users/5"
+  "user": {
+    "fullname": "Administrator",
+    "email": "administrator@gmail.com",
+    "self": {
+      "href": "/rest/user/5"
     }
-  ]
+  },
+  "avatar": {
+    "profile_picture_url": "img/common/commentAvatar.png",
+    "self": {
+      "href": "/image/Administrator/5"
+    }
+  }
 }
 
 ```
@@ -29,24 +33,35 @@ RequireJS is a JavaScript file and module loader. It is optimized for in-browser
 ```
 {
   "id": 2,
-  "parent": null,
-  "created": "2017-03-28",
-  "modified": "2017-03-28",
-  "content": "Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.",
-  "pings": null,
-  "creator": 5,
-  "fullname": "Administrator",
-  "profile_picture_url": "img/common/commentAvatar.png",
-  "created_by_admin": true,
   "created_by_current_user": false,
-  "upvote_count": 2,
-  "user_has_upvote": false,
-  "links": [
-    {
-      "rel": "Self",
-      "href": "http://localhost:8091/CommentRESTService/comments/2"
+  "created_by_admin": true,
+  "user_has_upvoted": false,
+  "parent": null,
+  "author": {
+    "creator": 5,
+    "fullname": "Administrator",
+    "self": {
+      "href": "/profile/Administrator/5"
     }
-  ]
+  },
+  "message": {
+    "content": "Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.",
+    "date": {
+      "created": "\"2017-03-28",
+      "modified": "2017-03-28"
+    },
+    "upvote_count": 2,
+    "pings": null
+  },
+  "avatar": {
+    "profile_picture_url": "img/common/commentAvatar.png",
+    "self": {
+      "href": "Administrator/images/5"
+    }
+  },
+  "self": {
+    "href": "/rest/comment/2"
+  }
 }
 ```
 
