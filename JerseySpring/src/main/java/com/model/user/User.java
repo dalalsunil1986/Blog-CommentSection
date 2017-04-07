@@ -1,5 +1,6 @@
 package com.model.user;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,18 +10,21 @@ import javax.persistence.Id;
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	@Column
 	private String fullName;
+	@Column
 	private String email;
+	@Column
 	private String profile_picture_url;
 
-	public Integer getUserId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setUserId(Integer userId) {
-		this.id = userId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getFullName() {
