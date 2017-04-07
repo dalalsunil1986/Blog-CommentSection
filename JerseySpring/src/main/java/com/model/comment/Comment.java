@@ -24,6 +24,15 @@ public class Comment {
 	private String profile_picture_url;
 	private Integer pings;
 	private Integer parent;
+	private String uniqueId;
+
+	public String getUniqueId() {
+		return uniqueId;
+	}
+
+	public void setUniqueId(String uniqueId) {
+		this.uniqueId = uniqueId;
+	}
 
 	public Integer getParent() {
 		return parent;
