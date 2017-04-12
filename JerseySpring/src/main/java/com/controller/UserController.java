@@ -57,7 +57,7 @@ public class UserController {
 			resultList.add(userData);
 		}
 
-		return resultList;
+		return userList;
 	}
 
 	@GET
@@ -68,22 +68,29 @@ public class UserController {
 		log.info("Starting User Controller Get User By Id");
 
 		User user = userService.getUserById(userId);
-
 		UserData userData = new UserData();
-		userData.setId(user.getId());
+		if (user == null) {
+			userData.setErrorCode("404");
+			userData.setErrorMessage("There is No user for this Id: " + userId);
+			return userData;
+		} else {
 
-		Member member = new Member();
-		member.setEmail(user.getEmail());
-		member.setFullname(user.getFullName());
-		member.setSelf(new Href("/rest/user/" + user.getId()));
-		userData.setUser(member);
+			userData.setId(user.getId());
 
-		Avatar avatar = new Avatar();
-		avatar.setProfile_picture_url(user.getProfile_picture_url());
-		avatar.setSelf(new Href("/image/" + user.getFullName() + "/" + user.getId()));
-		userData.setAvatar(avatar);
+			Member member = new Member();
+			member.setEmail(user.getEmail());
+			member.setFullname(user.getFullName());
+			member.setSelf(new Href("/rest/user/" + user.getId()));
+			userData.setUser(member);
 
-		return userData;
+			Avatar avatar = new Avatar();
+			avatar.setProfile_picture_url(user.getProfile_picture_url());
+			avatar.setSelf(new Href("/image/" + user.getFullName() + "/" + user.getId()));
+			userData.setAvatar(avatar);
+
+			return userData;
+		}
+
 	}
 
 	@POST

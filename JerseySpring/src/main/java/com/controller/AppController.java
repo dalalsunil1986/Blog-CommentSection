@@ -38,7 +38,7 @@ public class AppController {
 	@Path("getapp/{appName}")
 	public Application getAppByName(@PathParam(value = "appName") String appName) {
 		log.info("Starting User Controller Get User By appName");
-		Application app = appService.getApplicationById(appName);
+		Application app = appService.getApplicationByName(appName);
 		return app;
 	}
 
@@ -47,11 +47,21 @@ public class AppController {
 	@Consumes("application/json")
 	@Produces("application/json")
 	public Response addUser(Application app) {
-		//creating random AlphaNumeric for APIkey
-		String uniqueId = RandomStringUtils.randomAlphanumeric(5).toUpperCase();
-		app.setUniqueId(uniqueId);
-		appService.addApplication(app);
-		return Response.ok().entity(app).build();
+		// creating random AlphaNumeric for APIkey
+		Application oldApp = appService.getApplicationByName(app.getOrgName());
+
+		if (oldApp == null) {
+			Application newApp = app;
+			String uniqueId = RandomStringUtils.randomAlphanumeric(5).toUpperCase();
+			app.setUniqueId(uniqueId);
+			appService.addApplication(newApp);
+			return Response.ok().entity(newApp).build();
+		} else {
+			oldApp.setErrorCode("406");
+			oldApp.setErrorMessage("Organization Already Exist in this Name. Please choose ");
+			return Response.ok().entity(oldApp).build();
+		}
+
 	}
 
 	// deleting the applcation by apikey
@@ -64,19 +74,20 @@ public class AppController {
 	}
 
 	@POST
-	@Path("/validate")
+	@Path("/validation")
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response validateApp(Application app, HttpSession session) {
-
+	public Response validateApp(Application app) {
+		log.info("Starting User Controller Validation");
 		app = appService.validateApp(app);
 
 		if (app == null) {
-			return Response.status(Response.Status.UNAUTHORIZED).build();
+			app = new Application();
+			app.setErrorCode("401");
+			app.setErrorMessage("Invalid Credentials Please Check");
+			return Response.status(Response.Status.UNAUTHORIZED).entity(app).build();
 		} else {
-			appService.validateApp(app);
 			// stored the apikey in session to use it in comment section
-			session.setAttribute("LoggedAppKey", app.getUniqueId());
 			return Response.status(Response.Status.ACCEPTED).entity(app).build();
 		}
 

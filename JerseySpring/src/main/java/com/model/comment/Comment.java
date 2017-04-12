@@ -26,6 +26,16 @@ public class Comment {
 	private Integer parent;
 	private String uniqueId;
 
+	private Integer postId;
+
+	public Integer getPostId() {
+		return postId;
+	}
+
+	public void setPostId(Integer postId) {
+		this.postId = postId;
+	}
+
 	public String getUniqueId() {
 		return uniqueId;
 	}

@@ -9,7 +9,6 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.model.comment.Comment;
-import com.model.user.Application;
 
 public class CommentService {
 
@@ -37,6 +36,18 @@ public class CommentService {
 
 	}
 
+	// Getting all commentsList filtered by postId
+	@Transactional
+	public List<Comment> getCommentByPostId(Integer postId) {
+		log.info("Starting get Comment By Id" + postId);
+		Session session = SessionUtil.getSession();
+		String hql = "from Comment where postId='" + postId + "'";
+		log.error("from Comment where uniqueId='" + postId + "'");
+		Query query = session.createQuery(hql);
+		return (List<Comment>) query.list();
+
+	}
+
 	// Getting all commentsList filtered by uniqueId
 	@Transactional
 	public List<Comment> getApplications(String uniqueId) {
@@ -47,6 +58,15 @@ public class CommentService {
 		Query query = session.createQuery(hql);
 		return (List<Comment>) query.list();
 
+	}
+
+	@Transactional
+	public List<Comment> getComments(String apikey, Integer postId) {
+		log.info("Starting get Comment By postId" + postId + "apiKey " + apikey);
+		Session session = SessionUtil.getSession();
+		String hql = "from Comment where uniqueId='" + apikey + "' AND postId='" + postId + "'";
+		Query query = session.createQuery(hql);
+		return (List<Comment>) query.list();
 	}
 
 }

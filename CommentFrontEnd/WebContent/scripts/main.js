@@ -3,7 +3,7 @@
  */
 
 // Injecting JQuery, comments and commentsData
-define([ 'jquery', 'comments', 'commentData' ], function($) {
+define([ 'jquery', 'comments', 'commentsData' ], function($) {
 
 	$(function() {
 		var saveComment = function(data) {
@@ -30,11 +30,13 @@ define([ 'jquery', 'comments', 'commentData' ], function($) {
 			enablePinging : true,
 			getUsers : function(success, error) {
 				setTimeout(function() {
+
 					success(usersArray);
 				}, 500);
 			},
 			getComments : function(success, error) {
 				setTimeout(function() {
+
 					success(commentsArray);
 				}, 500);
 			},

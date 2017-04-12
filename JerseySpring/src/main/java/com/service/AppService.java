@@ -24,7 +24,7 @@ public class AppService {
 	}
 
 	@Transactional
-	public Application getApplicationById(String appName) {
+	public Application getApplicationByName(String appName) {
 		log.info("Starting get Application By Id" + appName);
 		Session session = SessionUtil.getSession();
 		String hql = "from Application where orgName='" + appName + "'";
@@ -67,6 +67,7 @@ public class AppService {
 				+ "'";
 		Query query = session.createQuery(hql);
 		Application validApp = (Application) query.uniqueResult();
+		log.info("********"+validApp);
 		return validApp;
 
 	}

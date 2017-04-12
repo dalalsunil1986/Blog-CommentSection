@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Application {
+public class Application extends ErrorLog{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

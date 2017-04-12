@@ -3,18 +3,12 @@
  */
 
 // Base URI for RESTService
-var BASE_URL = 'http://localhost:8080/JerseySpring/webApi/';
+var BASE_URL = 'http://localhost:8080/CommentJersey/webApi';
+var dom_el = document.querySelector('[data-ng-controller="appController"]');
+var ng_el = angular.element(dom_el);
+var ng_el_scope = ng_el.scope();
 
-// Get Comments
-var commentsArray;
+console.log("************************" + ng_el_scope.commentsArray);
 
-$.getJSON(BASE_URL + "rest/comments", function(json) {
-	commentsArray = json;
-});
-
-// Get Users
-var usersArray;
-
-$.getJSON(BASE_URL + "rest/users", function(json) {
-	usersArray = json;
-});
+var commentsArray = ng_el_scope.commentsArray;
+var usersArray = ng_el_scope.usersArray;

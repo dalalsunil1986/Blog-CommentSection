@@ -2,7 +2,7 @@ package com.model.user;
 
 import com.model.comment.Avatar;
 
-public class UserData {
+public class UserData extends ErrorLog {
 
 	private Integer id;
 	private Member user;

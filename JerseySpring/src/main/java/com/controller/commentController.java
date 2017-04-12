@@ -32,8 +32,10 @@ public class CommentController {
 	CommentService com = new CommentService();
 
 	// Getting All Comments
-	//For admin section
+	// For admin section
+
 	@GET
+
 	@Produces(MediaType.APPLICATION_JSON)
 	public List getAllComments() {
 
@@ -129,13 +131,14 @@ public class CommentController {
 	}
 
 	@GET
-	@Path("{apiKey}/comments")
+	@Path("{apiKey}/{postId}/comments")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List getAllCommentsByUniqueId(@PathParam(value = "apiKey") String apiKey) {
+	public List getAllCommentsByPostId(@PathParam(value = "postId") Integer postId,
+			@PathParam(value = "apiKey") String apikey) {
 
-		log.info("Starting Comment Controller Get All Comments");
+		log.info("Starting Comment Controller based on PostId");
 
-		List<Comment> list = com.getApplications(apiKey);
+		List<Comment> list = com.getComments(apikey, postId);
 
 		List<CommentData> result = new ArrayList<>();
 
@@ -175,6 +178,6 @@ public class CommentController {
 			result.add(comdata);
 		}
 
-		return result;
+		return list;
 	}
 }
